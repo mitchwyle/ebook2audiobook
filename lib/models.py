@@ -32,13 +32,13 @@ max_upload_size = '6GB'
 default_engine_settings = {
     TTS_ENGINES['XTTSv2']: {
         "samplerate": 24000,
-        "temperature": 0.75,
-        "length_penalty": 1.0,
+        "temperature": 0.85,
+        "length_penalty": 0.8,
         "num_beams": 1,
-        "repetition_penalty": 3.0,
-        "top_k": 50,
-        "top_p": 0.85,
-        "speed": 1.0,
+        "repetition_penalty": 4.0,
+        "top_k": 40,
+        "top_p": 0.90,
+        "speed": 0.95,
         "enable_text_splitting": False,
         # to enable deepspeed, you must install it first:
         # conda activate ./python_env (linux/mac) or .\python_env (windows)
@@ -72,8 +72,8 @@ default_engine_settings = {
     },
     TTS_ENGINES['BARK']: {
         "samplerate": 24000,
-        "text_temp": 0.50,
-        "waveform_temp": 0.50,
+        "text_temp": 0.65,
+        "waveform_temp": 0.60,
         "files": ["text_2.pt", "coarse_2.pt", "fine_2.pt"],
         "speakers_path": os.path.join(voices_dir, '__bark'),
         "voices": {
